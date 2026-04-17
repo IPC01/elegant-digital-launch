@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import {
   ShieldCheck, Fingerprint, KeyRound, Network, Lock, Sparkles,
   ArrowUpRight, Building2, Smartphone, Banknote, Briefcase,
-  ChevronRight, MapPin, Mail
+  ChevronRight, MapPin, Mail, Twitter, Linkedin
 } from "lucide-react";
 import heroImg from "@/assets/hero-identity.jpg";
 import logoImg from "@/assets/logo.png";
@@ -49,16 +49,109 @@ const steps = [
   { n: "04", t: "Suporte e Capacitação", d: "Formação contínua e operação assistida para autonomia institucional." },
 ];
 
-const values = [
-  "Alinhamento com quadros nacionais de certificação digital",
-  "Soluções escaláveis para mercados emergentes",
-  "Integração com infraestruturas de telecomunicações",
-  "Promoção da inclusão financeira e acesso digital",
-  "Forte foco em segurança e confiança",
-];
+const translations = {
+  pt: {
+    nav: {
+      sobre: "Sobre",
+      servicos: "Serviços",
+      casos: "Casos de Uso",
+      projectos: "Projectos",
+      abordagem: "Abordagem",
+      visao: "Visão",
+      agendar: "Agendar"
+    },
+    hero: {
+      location: "Maputo · Moçambique · Identidade Digital",
+      title1: "Infraestrutura",
+      title2: "segura",
+      title3: "de identidade",
+      title4: "digital",
+      desc: "A ePersona apoia instituições governamentais, operadores de telecomunicações e empresas na concepção de sistemas seguros de identidade, autenticação e assinatura — alinhados com os quadros nacionais.",
+      button1: "Solicitar Apresentação Institucional",
+      button2: "Agendar Consulta",
+      grid: [
+        ["PKI", "Chave Pública"],
+        ["eID", "Identidade Digital"],
+        ["Mobile ID", "SIM-based"],
+        ["KYC", "Onboarding seguro"],
+      ]
+    },
+    vision: {
+      section: "/ 05 — A NOSSA VISÃO",
+      title: "A Nossa Visão",
+      text: "Contribuir para o desenvolvimento de uma economia digital segura e inclusiva em Moçambique, onde indivíduos e instituições possam interagir com confiança e eficiência",
+      focus: "FOCO ACTUAL · Em fase de desenvolvimento, abertos a parcerias e projectos-piloto"
+    },
+    mission: {
+      title: "A Nossa Missão",
+      text: "Fornecer soluções inovadoras de identidade digital que capacitam instituições e indivíduos em Moçambique."
+    },
+    values: {
+      title: "Por que a ePersona",
+      list: [
+        "Alinhamento com os quadros nacionais de certificação digital",
+        "Soluções escaláveis adaptadas a mercados emergentes",
+        "Integração com infraestruturas de telecomunicações",
+        "Promoção da inclusão financeira e acesso a serviços digitais",
+        "Forte foco em segurança e confiança"
+      ]
+    }
+  },
+  en: {
+    nav: {
+      sobre: "About",
+      servicos: "Services",
+      casos: "Use Cases",
+      projectos: "Projects",
+      abordagem: "Approach",
+      visao: "Vision",
+      agendar: "Schedule"
+    },
+    hero: {
+      location: "Maputo · Mozambique · Digital Identity",
+      title1: "Infrastructure",
+      title2: "secure",
+      title3: "of digital",
+      title4: "identity",
+      desc: "ePersona supports government institutions, telecommunications operators and companies in the design of secure identity, authentication and signature systems — aligned with national frameworks.",
+      button1: "Request Institutional Presentation",
+      button2: "Schedule Consultation",
+      grid: [
+        ["PKI", "Public Key"],
+        ["eID", "Digital Identity"],
+        ["Mobile ID", "SIM-based"],
+        ["KYC", "Secure Onboarding"],
+      ]
+    },
+    vision: {
+      section: "/ 05 — OUR VISION",
+      title: "Our Vision",
+      text: "To support the development of a secure, inclusive digital economy in Mozambique, where individuals and institutions can interact with trust and efficiency",
+      focus: "CURRENT FOCUS · In development phase, open to partnerships and pilot projects"
+    },
+    mission: {
+      title: "Our Mission",
+      text: "To provide innovative digital identity solutions that empower institutions and individuals in Mozambique."
+    },
+    values: {
+      title: "Why ePersona",
+      list: [
+        "Alignment with national digital certification frameworks",
+        "Scalable solutions for emerging markets",
+        "Integration with telecom infrastructure",
+        "Support for financial inclusion",
+        "Strong focus on security and trust"
+      ]
+    }
+  }
+};
 
 const Index = () => {
   useReveal();
+  const [language, setLanguage] = useState('pt');
+  const toggleLanguage = () => setLanguage(language === 'pt' ? 'en' : 'pt');
+  const t = translations[language];
+  const values = t.values.list;
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -77,17 +170,20 @@ const Index = () => {
             <span className="font-display text-xl tracking-tight">ePersona</span>
           </a>
           <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
-            <a href="#sobre" className="hover:text-foreground transition-colors">Sobre</a>
-            <a href="#servicos" className="hover:text-foreground transition-colors">Serviços</a>
-            <a href="#casos" className="hover:text-foreground transition-colors">Casos de Uso</a>
-            <a href="#projectos" className="hover:text-foreground transition-colors">Projectos</a>
-            <a href="#abordagem" className="hover:text-foreground transition-colors">Abordagem</a>
-            <a href="#visao" className="hover:text-foreground transition-colors">Visão</a>
+            <a href="#sobre" className="hover:text-foreground transition-colors">{t.nav.sobre}</a>
+            <a href="#servicos" className="hover:text-foreground transition-colors">{t.nav.servicos}</a>
+            <a href="#casos" className="hover:text-foreground transition-colors">{t.nav.casos}</a>
+            <a href="#projectos" className="hover:text-foreground transition-colors">{t.nav.projectos}</a>
+            <a href="#abordagem" className="hover:text-foreground transition-colors">{t.nav.abordagem}</a>
+            <a href="#visao" className="hover:text-foreground transition-colors">{t.nav.visao}</a>
           </nav>
           <div className="flex items-center gap-2">
+            <button onClick={toggleLanguage} className="w-8 h-8 rounded-sm border border-border grid place-items-center hover:border-primary hover:bg-primary/5 transition-all text-xs font-mono">
+              {language === 'pt' ? 'EN' : 'PT'}
+            </button>
             <ThemeToggle />
-            <a href="#contacto" className="group inline-flex items-center gap-2 text-sm px-4 py-2 rounded-sm border border-border hover:border-primary hover:bg-primary/5 transition-all">
-              Agendar
+            <a href="mailto:marvin@e-persona.com" className="group inline-flex items-center gap-2 text-sm px-4 py-2 rounded-sm border border-border hover:border-primary hover:bg-primary/5 transition-all">
+              {t.nav.agendar}
               <ArrowUpRight className="w-3.5 h-3.5 group-hover:rotate-45 transition-transform" />
             </a>
           </div>
@@ -113,38 +209,31 @@ const Index = () => {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border bg-card/50 backdrop-blur text-xs font-mono text-muted-foreground mb-8 animate-fade-in">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-              Maputo · Moçambique · Identidade Digital
+              {t.hero.location}
             </div>
             <h1 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] mb-8 animate-fade-up">
-              Infraestrutura
+              {t.hero.title1}
               <br />
-              <span className="italic font-light text-gradient">segura</span> de
+              <span className="italic font-light text-gradient">{t.hero.title2}</span> {t.hero.title3}
               <br />
-              identidade <span className="text-gradient-accent">digital</span>.
+              {t.hero.title4}.
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed animate-fade-up" style={{ animationDelay: "150ms" }}>
-              A ePersona apoia instituições governamentais, operadores de telecomunicações e empresas
-              na concepção de sistemas seguros de identidade, autenticação e assinatura — alinhados
-              com os quadros nacionais.
+              {t.hero.desc}
             </p>
             <div className="flex flex-wrap gap-3 animate-fade-up" style={{ animationDelay: "300ms" }}>
               <a href="#contacto" className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-sm bg-foreground text-background font-medium hover:bg-primary hover:text-primary-foreground transition-all shadow-elegant">
-                Solicitar Apresentação Institucional
+                {t.hero.button1}
                 <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
               <a href="#contacto" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-sm border border-border hover:border-primary hover:bg-primary/5 transition-all">
-                Agendar Consulta
+                {t.hero.button2}
               </a>
             </div>
           </div>
 
           <div className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-px bg-border/60 border border-border rounded-sm overflow-hidden max-w-4xl">
-            {[
-              ["PKI", "Chave Pública"],
-              ["eID", "Identidade Digital"],
-              ["Mobile ID", "SIM-based"],
-              ["KYC", "Onboarding seguro"],
-            ].map(([k, v]) => (
+            {t.hero.grid.map(([k, v]) => (
               <div key={k} className="bg-card p-5">
                 <div className="font-mono text-xs text-primary mb-1">{k}</div>
                 <div className="text-sm text-muted-foreground">{v}</div>
@@ -186,36 +275,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* METRICS */}
-      <section id="metricas" className="py-24 border-t border-border relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none" />
-        <div className="absolute left-1/3 top-0 w-[500px] h-[500px] rounded-full bg-accent/10 blur-[120px] pointer-events-none" />
-        <div className="container relative">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 reveal">
-            <div>
-              <div className="font-mono text-xs text-primary mb-4">/ EM NÚMEROS</div>
-              <h2 className="font-display text-4xl md:text-5xl leading-tight max-w-2xl">
-                Resultados que <span className="italic text-gradient">comprovam</span> a nossa entrega.
-              </h2>
-            </div>
-            <p className="text-sm text-muted-foreground max-w-sm">
-              Métricas consolidadas desde a fundação — projectos em ambiente real, com instituições de referência.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border rounded-sm overflow-hidden">
-            {metrics.map((m, i) => (
-              <div key={i} className="bg-card p-8 lg:p-10 group hover:bg-secondary/40 transition-all reveal" style={{ transitionDelay: `${i * 80}ms` }}>
-                <div className="font-display text-5xl md:text-6xl text-gradient mb-4 group-hover:scale-105 transition-transform origin-left">
-                  {m.value}
-                </div>
-                <div className="text-foreground font-medium mb-1">{m.label}</div>
-                <div className="text-xs font-mono text-muted-foreground uppercase tracking-wider">{m.sub}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* SERVICES */}
       <section id="servicos" className="py-32 relative border-t border-border">
@@ -308,14 +368,14 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-4 gap-4">
             {projects.map((p, i) => (
               <article
                 key={i}
                 className="group relative overflow-hidden rounded-sm border border-border bg-card hover-lift reveal"
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
-                <div className="aspect-[16/10] overflow-hidden relative">
+                <div className="aspect-[4/3] overflow-hidden relative">
                   <img
                     src={p.img}
                     alt={p.title}
@@ -332,9 +392,9 @@ const Index = () => {
                     {p.year}
                   </div>
                 </div>
-                <div className="p-7">
+                <div className="p-5">
                   <div className="flex items-start justify-between gap-4 mb-3">
-                    <h3 className="font-display text-2xl leading-tight group-hover:text-gradient transition-all">
+                    <h3 className="font-display text-xl leading-tight group-hover:text-gradient transition-all">
                       {p.title}
                     </h3>
                     <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:rotate-45 transition-all flex-shrink-0 mt-1" />
@@ -384,15 +444,24 @@ const Index = () => {
         <div className="absolute inset-0 bg-grid opacity-30 pointer-events-none" />
         <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
         <div className="container relative">
-          <div className="max-w-4xl mx-auto text-center reveal">
-            <div className="font-mono text-xs text-primary mb-6">/ 05 — A NOSSA VISÃO</div>
-            <blockquote className="font-display text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight">
-              Contribuir para o desenvolvimento de uma <span className="italic text-gradient">economia digital</span> segura e inclusiva em Moçambique — onde indivíduos e instituições interagem com <span className="text-gradient-accent">confiança</span> e eficiência.
-            </blockquote>
-            <div className="mt-12 inline-flex items-center gap-3 text-sm text-muted-foreground font-mono">
-              <span className="w-8 h-px bg-primary" />
-              FOCO ACTUAL · Em fase de desenvolvimento, abertos a parcerias e projectos-piloto
-              <span className="w-8 h-px bg-primary" />
+          <div className="max-w-6xl mx-auto reveal">
+            <div className="font-mono text-xs text-primary mb-6 text-center">{t.vision.section}</div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="text-center">
+                <h3 className="font-display text-2xl mb-4">{t.vision.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{t.vision.text}</p>
+              </div>
+              <div className="text-center">
+                <h3 className="font-display text-2xl mb-4">{t.mission.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{t.mission.text}</p>
+              </div>
+            </div>
+            <div className="mt-12 text-center">
+              <div className="inline-flex items-center gap-3 text-sm text-muted-foreground font-mono">
+                <span className="w-8 h-px bg-primary" />
+                {t.vision.focus}
+                <span className="w-8 h-px bg-primary" />
+              </div>
             </div>
           </div>
         </div>
@@ -433,26 +502,82 @@ const Index = () => {
           </div>
         </div>
       </section>
+{/* METRICS */}
+      <section id="metricas" className="py-24 border-t border-border relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none" />
+        <div className="absolute left-1/3 top-0 w-[500px] h-[500px] rounded-full bg-accent/10 blur-[120px] pointer-events-none" />
+        <div className="container relative">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 reveal">
+            <div>
+              <div className="font-mono text-xs text-primary mb-4">/ EM NÚMEROS</div>
+              <h2 className="font-display text-4xl md:text-5xl leading-tight max-w-2xl">
+                Resultados que <span className="italic text-gradient">comprovam</span> a nossa entrega.
+              </h2>
+            </div>
+            <p className="text-sm text-muted-foreground max-w-sm">
+              Métricas consolidadas desde a fundação — projectos em ambiente real, com instituições de referência.
+            </p>
+          </div>
 
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border rounded-sm overflow-hidden">
+            {metrics.map((m, i) => (
+              <div key={i} className="bg-card p-8 lg:p-10 group hover:bg-secondary/40 transition-all reveal" style={{ transitionDelay: `${i * 80}ms` }}>
+                <div className="font-display text-5xl md:text-6xl text-gradient mb-4 group-hover:scale-105 transition-transform origin-left">
+                  {m.value}
+                </div>
+                <div className="text-foreground font-medium mb-1">{m.label}</div>
+                <div className="text-xs font-mono text-muted-foreground uppercase tracking-wider">{m.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* FOOTER */}
       <footer className="border-t border-border py-12">
-        <div className="container grid md:grid-cols-3 gap-8 items-center">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-sm bg-gradient-accent grid place-items-center">
-              <Lock className="w-4 h-4 text-primary-foreground" strokeWidth={2.5} />
+        <div className="container grid md:grid-cols-4 gap-8">
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <img src={logoImg} alt="ePersona" className="w-8 h-8 rounded-sm object-cover" />
+              <span className="font-display text-xl">ePersona</span>
             </div>
-            <span className="font-display text-xl">ePersona</span>
+            <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
+              A ePersona apoia instituições governamentais, operadores de telecomunicações e empresas na concepção de sistemas seguros .
+            </p>
           </div>
-          <div className="flex items-center gap-2 text-sm text-muted-foreground md:justify-center">
-            <MapPin className="w-4 h-4" /> Maputo, Moçambique
+          <div>
+            <h3 className="font-medium mb-4 text-sm">Links Rápidos</h3>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li><a href="#sobre" className="hover:text-foreground transition-colors">Sobre</a></li>
+              <li><a href="#servicos" className="hover:text-foreground transition-colors">Serviços</a></li>
+              <li><a href="#casos" className="hover:text-foreground transition-colors">Casos de Uso</a></li>
+              <li><a href="#projectos" className="hover:text-foreground transition-colors">Projectos</a></li>
+            </ul>
           </div>
-          <a href="mailto:marvin@e-persona.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors md:justify-end">
-            <Mail className="w-4 h-4" /> marvin@e-persona.com
-          </a>
+          <div>
+            <h3 className="font-medium mb-4 text-sm">Contactos</h3>
+            <div className="space-y-2 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4" /> Maputo, Moçambique
+              </div>
+              <a href="mailto:marvin@e-persona.com" className="flex items-center gap-2 hover:text-foreground transition-colors">
+                <Mail className="w-4 h-4" /> marvin@e-persona.com
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 className="font-medium mb-4 text-sm">Redes Sociais</h3>
+            <div className="flex gap-3">
+              <a href="#" className="w-8 h-8 rounded-sm border border-border grid place-items-center hover:border-primary hover:bg-primary/5 transition-all">
+                <Linkedin className="w-4 h-4" />
+              </a>
+              <a href="#" className="w-8 h-8 rounded-sm border border-border grid place-items-center hover:border-primary hover:bg-primary/5 transition-all">
+                <Twitter className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
         </div>
-        <div className="container mt-8 pt-8 border-t border-border flex flex-col md:flex-row justify-between gap-3 text-xs font-mono text-muted-foreground">
-          <span>© {new Date().getFullYear()} ePersona — Todos os direitos reservados</span>
-          <span>Identidade Digital · PKI · Autenticação</span>
+        <div className="container mt-8 pt-8 border-t border-border text-center text-xs font-mono text-muted-foreground">
+          © {new Date().getFullYear()} Todos os direitos reservados a Kumalisa Tech
         </div>
       </footer>
     </div>
