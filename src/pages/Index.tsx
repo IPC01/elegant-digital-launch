@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/hero-identity.jpg";
 import { useReveal } from "@/hooks/use-reveal";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const services = [
   { icon: Fingerprint, title: "Sistemas de Identidade Digital", desc: "Mobile ID baseado em SIM, sistemas eID e plataformas seguras de autenticação." },
@@ -65,10 +66,13 @@ const Index = () => {
             <a href="#abordagem" className="hover:text-foreground transition-colors">Abordagem</a>
             <a href="#visao" className="hover:text-foreground transition-colors">Visão</a>
           </nav>
-          <a href="#contacto" className="group inline-flex items-center gap-2 text-sm px-4 py-2 rounded-sm border border-border hover:border-primary hover:bg-primary/5 transition-all">
-            Agendar
-            <ArrowUpRight className="w-3.5 h-3.5 group-hover:rotate-45 transition-transform" />
-          </a>
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <a href="#contacto" className="group inline-flex items-center gap-2 text-sm px-4 py-2 rounded-sm border border-border hover:border-primary hover:bg-primary/5 transition-all">
+              Agendar
+              <ArrowUpRight className="w-3.5 h-3.5 group-hover:rotate-45 transition-transform" />
+            </a>
+          </div>
         </div>
       </header>
 
