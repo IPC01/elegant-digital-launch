@@ -5,6 +5,7 @@ import {
   ChevronRight, MapPin, Mail
 } from "lucide-react";
 import heroImg from "@/assets/hero-identity.jpg";
+import logoImg from "@/assets/epersona-logo.jpeg";
 import { useReveal } from "@/hooks/use-reveal";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
@@ -53,10 +54,8 @@ const Index = () => {
       {/* NAV */}
       <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${scrolled ? "py-3 backdrop-blur-xl bg-background/70 border-b border-border" : "py-6 bg-transparent"}`}>
         <div className="container flex items-center justify-between">
-          <a href="#top" className="flex items-center gap-2 group">
-            <div className="relative w-8 h-8 rounded-sm bg-gradient-accent grid place-items-center shadow-glow">
-              <Lock className="w-4 h-4 text-primary-foreground" strokeWidth={2.5} />
-            </div>
+          <a href="#top" className="flex items-center gap-2.5 group">
+            <img src={logoImg} alt="ePersona" className="w-9 h-9 rounded-sm object-cover shadow-glow group-hover:scale-105 transition-transform" />
             <span className="font-display text-xl tracking-tight">ePersona</span>
           </a>
           <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
