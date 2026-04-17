@@ -5,7 +5,7 @@ import {
   ChevronRight, MapPin, Mail
 } from "lucide-react";
 import heroImg from "@/assets/hero-identity.jpg";
-import logoImg from "@/assets/epersona-logo.jpeg";
+import logoImg from "@/assets/logo.png";
 import { useReveal } from "@/hooks/use-reveal";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
