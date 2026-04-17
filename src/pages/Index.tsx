@@ -80,6 +80,7 @@ const Index = () => {
             <a href="#sobre" className="hover:text-foreground transition-colors">Sobre</a>
             <a href="#servicos" className="hover:text-foreground transition-colors">Serviços</a>
             <a href="#casos" className="hover:text-foreground transition-colors">Casos de Uso</a>
+            <a href="#projectos" className="hover:text-foreground transition-colors">Projectos</a>
             <a href="#abordagem" className="hover:text-foreground transition-colors">Abordagem</a>
             <a href="#visao" className="hover:text-foreground transition-colors">Visão</a>
           </nav>
@@ -181,6 +182,37 @@ const Index = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* METRICS */}
+      <section id="metricas" className="py-24 border-t border-border relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none" />
+        <div className="absolute left-1/3 top-0 w-[500px] h-[500px] rounded-full bg-accent/10 blur-[120px] pointer-events-none" />
+        <div className="container relative">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 reveal">
+            <div>
+              <div className="font-mono text-xs text-primary mb-4">/ EM NÚMEROS</div>
+              <h2 className="font-display text-4xl md:text-5xl leading-tight max-w-2xl">
+                Resultados que <span className="italic text-gradient">comprovam</span> a nossa entrega.
+              </h2>
+            </div>
+            <p className="text-sm text-muted-foreground max-w-sm">
+              Métricas consolidadas desde a fundação — projectos em ambiente real, com instituições de referência.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border rounded-sm overflow-hidden">
+            {metrics.map((m, i) => (
+              <div key={i} className="bg-card p-8 lg:p-10 group hover:bg-secondary/40 transition-all reveal" style={{ transitionDelay: `${i * 80}ms` }}>
+                <div className="font-display text-5xl md:text-6xl text-gradient mb-4 group-hover:scale-105 transition-transform origin-left">
+                  {m.value}
+                </div>
+                <div className="text-foreground font-medium mb-1">{m.label}</div>
+                <div className="text-xs font-mono text-muted-foreground uppercase tracking-wider">{m.sub}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
