@@ -6,6 +6,24 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/hero-identity.jpg";
 import logoImg from "@/assets/logo.png";
+import project1 from "@/assets/project-1.jpg";
+import project2 from "@/assets/project-2.jpg";
+import project3 from "@/assets/project-3.jpg";
+import project4 from "@/assets/project-4.jpg";
+
+const metrics = [
+  { value: "12+", label: "Projectos entregues", sub: "em fase piloto e produção" },
+  { value: "08", label: "Clientes institucionais", sub: "governo, telecom e banca" },
+  { value: "99.9%", label: "Disponibilidade média", sub: "infraestrutura crítica" },
+  { value: "4", label: "Sectores estratégicos", sub: "cobertura nacional" },
+];
+
+const projects = [
+  { img: project1, tag: "Plataforma eID", title: "Dashboard Nacional de Identidade", desc: "Sistema centralizado de gestão de identidades digitais com analytics em tempo real.", year: "2025" },
+  { img: project2, tag: "Mobile ID", title: "Autenticação SIM-based", desc: "Solução de autenticação móvel para operador de telecomunicações líder.", year: "2024" },
+  { img: project3, tag: "Sector Público", title: "Quiosques de Enrolment Cidadão", desc: "Rede de pontos físicos para emissão e validação de credenciais digitais.", year: "2024" },
+  { img: project4, tag: "PKI / Banca", title: "Infraestrutura de Chave Pública", desc: "CA hierárquica para assinatura de transações financeiras de alto volume.", year: "2025" },
+];
 import { useReveal } from "@/hooks/use-reveal";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
