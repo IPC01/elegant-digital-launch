@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/hero-identity.jpg";
 import { useReveal } from "@/hooks/use-reveal";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const services = [
   { icon: Fingerprint, title: "Sistemas de Identidade Digital", desc: "Mobile ID baseado em SIM, sistemas eID e plataformas seguras de autenticação." },
