@@ -499,21 +499,33 @@ const Index = () => {
               <div className="md:col-span-7">
                 <div className="font-mono text-xs text-primary mb-6">/ CONTACTO</div>
                 <h2 className="font-display text-4xl md:text-6xl leading-[1.05] mb-6">
-                  Vamos construir o seu <span className="italic text-gradient">ecossistema</span> de identidade digital.
+                  Vamos construir o seu próximo <span className="italic text-gradient">projecto</span> digital.
                 </h2>
                 <p className="text-muted-foreground text-lg max-w-xl">
-                  Estamos abertos a parcerias estratégicas, projectos-piloto e implementações colaborativas.
+                  Engenharia, software e IA num só parceiro. Estamos abertos a propostas, concursos e parcerias estratégicas.
                 </p>
+                <div className="mt-8 space-y-3 text-sm">
+                  <div className="flex items-center gap-3 text-muted-foreground">
+                    <MapPin className="w-4 h-4 text-primary" />
+                    Rua Alfred Keil nº 75, 1º Andar · Polana · KaMpfumo · Maputo
+                  </div>
+                  <a href="mailto:geral@zipbcc.co.mz" className="flex items-center gap-3 hover:text-foreground transition-colors text-muted-foreground">
+                    <Mail className="w-4 h-4 text-primary" /> geral@zipbcc.co.mz
+                  </a>
+                  <a href="tel:+258213000000" className="flex items-center gap-3 hover:text-foreground transition-colors text-muted-foreground">
+                    <Phone className="w-4 h-4 text-primary" /> +258 21 300 000 · +258 84 300 0000
+                  </a>
+                </div>
               </div>
               <div className="md:col-span-5 space-y-3">
                 {[
-                  "Agendar Reunião Inicial",
-                  "Solicitar Discussão Técnica",
-                  "Explorar Oportunidades de Parceria",
+                  "Solicitar Proposta Comercial",
+                  "Agendar Reunião Técnica",
+                  "Explorar Parcerias Estratégicas",
                 ].map((t, i) => (
                   <a
                     key={i}
-                    href="mailto:marvin@e-persona.com"
+                    href="mailto:comercial@zipbcc.co.mz"
                     className="group flex items-center justify-between gap-4 px-5 py-4 rounded-sm border border-border bg-background/40 hover:border-primary hover:bg-primary/5 transition-all"
                   >
                     <span className="text-sm md:text-base">{t}</span>
