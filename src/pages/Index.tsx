@@ -2,20 +2,21 @@ import { useEffect, useState } from "react";
 import {
   ShieldCheck, Fingerprint, KeyRound, Network, Lock, Sparkles,
   ArrowUpRight, Building2, Smartphone, Banknote, Briefcase,
-  ChevronRight, MapPin, Mail, Twitter, Linkedin
+  ChevronRight, MapPin, Mail, Twitter, Linkedin, Phone, Hash, Calendar
 } from "lucide-react";
 import heroImg from "@/assets/hero-identity.jpg";
-import logoImg from "@/assets/logo.png";
+import logoAsset from "@/assets/zipbcc-logo.png.asset.json";
+const logoImg = logoAsset.url;
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
 
 const metrics = [
-  { value: "12+", label: "Projectos entregues", sub: "em fase piloto e produção" },
-  { value: "08", label: "Clientes institucionais", sub: "governo, telecom e banca" },
+  { value: "12+", label: "Anos de mercado", sub: "fundada em Maio de 2013" },
+  { value: "40+", label: "Projectos entregues", sub: "engenharia e digital" },
+  { value: "25+", label: "Clientes institucionais", sub: "público e privado" },
   { value: "99.9%", label: "Disponibilidade média", sub: "infraestrutura crítica" },
-  { value: "4", label: "Sectores estratégicos", sub: "cobertura nacional" },
 ];
 
 const projects = [
