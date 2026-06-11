@@ -41,9 +41,7 @@ const translations = {
     nav: {
       sobre: "Sobre",
       servicos: "Serviços",
-      casos: "Casos de Uso",
       projectos: "Projectos",
-      abordagem: "Abordagem",
       visao: "Visão",
       agendar: "Falar connosco"
     },
@@ -88,9 +86,7 @@ const translations = {
     nav: {
       sobre: "About",
       servicos: "Services",
-      casos: "Use Cases",
       projectos: "Projects",
-      abordagem: "Approach",
       visao: "Vision",
       agendar: "Talk to us"
     },
@@ -162,9 +158,7 @@ const Index = () => {
           <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#sobre" className="hover:text-foreground transition-colors">{t.nav.sobre}</a>
             <a href="#servicos" className="hover:text-foreground transition-colors">{t.nav.servicos}</a>
-            <a href="#casos" className="hover:text-foreground transition-colors">{t.nav.casos}</a>
             <a href="#projectos" className="hover:text-foreground transition-colors">{t.nav.projectos}</a>
-            <a href="#abordagem" className="hover:text-foreground transition-colors">{t.nav.abordagem}</a>
             <a href="#visao" className="hover:text-foreground transition-colors">{t.nav.visao}</a>
           </nav>
           <div className="flex items-center gap-2">
@@ -515,7 +509,6 @@ const Index = () => {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><a href="#sobre" className="hover:text-foreground transition-colors">Sobre</a></li>
               <li><a href="#servicos" className="hover:text-foreground transition-colors">Serviços</a></li>
-              <li><a href="#casos" className="hover:text-foreground transition-colors">Casos de Uso</a></li>
               <li><a href="#projectos" className="hover:text-foreground transition-colors">Projectos</a></li>
               <li><a href="#contacto" className="hover:text-foreground transition-colors">Contactos</a></li>
             </ul>
