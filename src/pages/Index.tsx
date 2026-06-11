@@ -572,12 +572,19 @@ const Index = () => {
         <div className="container grid md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img src={logoImg} alt="ePersona" className="w-8 h-8 rounded-sm object-cover" />
-              <span className="font-display text-xl">ePersona</span>
+              <img src={logoImg} alt="ZIPBCC" className="w-9 h-9 object-contain" />
+              <div className="flex flex-col leading-none">
+                <span className="font-display text-xl">ZIPBCC</span>
+                <span className="text-[10px] font-mono text-muted-foreground tracking-wider">YOUR DIGITAL & AI PARTNER</span>
+              </div>
             </div>
             <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
-              A ePersona apoia instituições governamentais, operadores de telecomunicações e empresas na concepção de sistemas seguros .
+              ZIPBCC, Lda — engenharia, infra-estruturas, soluções de informática e IA. A construir Moçambique digital desde 2013.
             </p>
+            <div className="mt-4 space-y-1 text-[11px] font-mono text-muted-foreground">
+              <div>NUEL · 100390205</div>
+              <div>SOC. POR QUOTAS · 40.000,00 MT</div>
+            </div>
           </div>
           <div>
             <h3 className="font-medium mb-4 text-sm">Links Rápidos</h3>
@@ -586,16 +593,21 @@ const Index = () => {
               <li><a href="#servicos" className="hover:text-foreground transition-colors">Serviços</a></li>
               <li><a href="#casos" className="hover:text-foreground transition-colors">Casos de Uso</a></li>
               <li><a href="#projectos" className="hover:text-foreground transition-colors">Projectos</a></li>
+              <li><a href="#contacto" className="hover:text-foreground transition-colors">Contactos</a></li>
             </ul>
           </div>
           <div>
             <h3 className="font-medium mb-4 text-sm">Contactos</h3>
             <div className="space-y-2 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4" /> Maputo, Moçambique
+              <div className="flex gap-2 items-start">
+                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                <span>Rua Alfred Keil nº 75, 1º Andar<br/>Polana · KaMpfumo · Maputo</span>
               </div>
-              <a href="mailto:marvin@e-persona.com" className="flex items-center gap-2 hover:text-foreground transition-colors">
-                <Mail className="w-4 h-4" /> marvin@e-persona.com
+              <a href="mailto:geral@zipbcc.co.mz" className="flex items-center gap-2 hover:text-foreground transition-colors">
+                <Mail className="w-4 h-4" /> geral@zipbcc.co.mz
+              </a>
+              <a href="tel:+258213000000" className="flex items-center gap-2 hover:text-foreground transition-colors">
+                <Phone className="w-4 h-4" /> +258 21 300 000
               </a>
             </div>
           </div>
@@ -609,10 +621,14 @@ const Index = () => {
                 <Twitter className="w-4 h-4" />
               </a>
             </div>
+            <div className="mt-6 text-[11px] font-mono text-muted-foreground leading-relaxed">
+              HORÁRIO<br/>
+              Seg–Sex · 08:00 — 17:00
+            </div>
           </div>
         </div>
         <div className="container mt-8 pt-8 border-t border-border text-center text-xs font-mono text-muted-foreground">
-          © {new Date().getFullYear()} Todos os direitos reservados a Kumalisa Tech
+          © {new Date().getFullYear()} ZIPBCC, LDA · Todos os direitos reservados
         </div>
       </footer>
     </div>
