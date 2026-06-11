@@ -253,20 +253,39 @@ const Index = () => {
           <div className="md:col-span-4 reveal">
             <div className="font-mono text-xs text-primary mb-4">/ 01 — SOBRE</div>
             <h2 className="font-display text-4xl md:text-5xl leading-tight">
-              Construindo <span className="italic text-gradient">confiança</span> digital em Moçambique.
+              Mais de uma década a construir <span className="italic text-gradient">Moçambique</span> digital.
             </h2>
           </div>
           <div className="md:col-span-7 md:col-start-6 space-y-6 reveal">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              A ePersona é uma empresa emergente de consultoria em tecnologias de informação e
-              infraestruturas digitais, focada em <span className="text-foreground">sistemas seguros de identidade</span>,
-              Infraestrutura de Chave Pública (PKI) e mecanismos de autenticação.
+              A <span className="text-foreground">ZIPBCC, Lda</span> é uma sociedade por quotas constituída a
+              17 de Maio de 2013, com sede em Maputo. Combinamos engenharia, infra-estruturas e
+              soluções de informática e comunicações para entregar projectos completos, da concepção
+              à operação.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Desenvolvemos capacidades para apoiar instituições públicas e privadas na criação de
-              ecossistemas digitais confiáveis e escaláveis — que permitam acesso seguro, assinaturas
-              digitais e verificação de identidade.
+              Operamos em áreas tão diversas como desenho e manutenção de infra-estruturas, edifícios,
+              portos, vias férreas, estradas e pontes, mas também em <span className="text-foreground">software,
+              cloud e inteligência artificial</span> — sempre como parceiro digital de confiança dos nossos clientes.
             </p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
+              <div className="border border-border rounded-sm p-3">
+                <div className="font-mono text-[10px] text-primary mb-1">NUEL</div>
+                <div className="text-sm">100390205</div>
+              </div>
+              <div className="border border-border rounded-sm p-3">
+                <div className="font-mono text-[10px] text-primary mb-1">FUNDADA</div>
+                <div className="text-sm">17 Mai 2013</div>
+              </div>
+              <div className="border border-border rounded-sm p-3">
+                <div className="font-mono text-[10px] text-primary mb-1">TIPO</div>
+                <div className="text-sm">Soc. por Quotas</div>
+              </div>
+              <div className="border border-border rounded-sm p-3">
+                <div className="font-mono text-[10px] text-primary mb-1">SEDE</div>
+                <div className="text-sm">Maputo, MZ</div>
+              </div>
+            </div>
             <div className="pt-4 grid grid-cols-2 gap-4">
               {values.map((v, i) => (
                 <div key={i} className="flex gap-3 items-start">
