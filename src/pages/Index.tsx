@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import {
   Building2, TrendingUp, Users, Wrench, Monitor, ShieldCheck,
-  ArrowUpRight, MapPin, Mail, Twitter, Linkedin, Phone, Calendar, Sparkles
+  ArrowUpRight, MapPin, Mail, Twitter, Linkedin, Phone, Calendar, ChevronRight
 } from "lucide-react";
 import heroImg from "@/assets/hero-identity.jpg";
 import logoAsset from "@/assets/zipbcc-logo.png.asset.json";
@@ -330,37 +330,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* USE CASES */}
-      <section id="casos" className="py-32 border-t border-border">
-        <div className="container">
-          <div className="mb-16 reveal">
-            <div className="font-mono text-xs text-primary mb-4">/ 03 — CASOS DE USO</div>
-            <h2 className="font-display text-4xl md:text-6xl leading-tight max-w-3xl">
-              Quatro sectores. Uma <span className="italic text-gradient">infraestrutura</span> comum.
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {useCases.map((u, i) => {
-              const Icon = u.icon;
-              return (
-                <div key={i} className="glass rounded-sm p-7 hover-lift reveal" style={{ transitionDelay: `${i * 80}ms` }}>
-                  <Icon className="w-7 h-7 text-primary mb-6" strokeWidth={1.5} />
-                  <div className="font-mono text-xs text-accent mb-2">{u.tag.toUpperCase()}</div>
-                  <ul className="space-y-3 mt-6">
-                    {u.items.map((it, k) => (
-                      <li key={k} className="text-sm text-muted-foreground flex gap-2 items-start border-t border-border pt-3 first:border-0 first:pt-0">
-                        <span className="text-primary mt-0.5">·</span>
-                        {it}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
 
       {/* PROJECTS */}
       <section id="projectos" className="py-32 border-t border-border">
@@ -416,37 +385,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* APPROACH */}
-      <section id="abordagem" className="py-32 border-t border-border">
-        <div className="container">
-          <div className="grid md:grid-cols-12 gap-12 mb-16">
-            <div className="md:col-span-5 reveal">
-              <div className="font-mono text-xs text-primary mb-4">/ 04 — A NOSSA ABORDAGEM</div>
-              <h2 className="font-display text-4xl md:text-6xl leading-tight">
-                Quatro etapas, <span className="italic text-gradient-accent">um caminho</span> claro.
-              </h2>
-            </div>
-          </div>
-
-          <div className="relative">
-            <div className="absolute left-0 right-0 top-[60px] h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent hidden md:block" />
-            <div className="grid md:grid-cols-4 gap-6">
-              {steps.map((s, i) => (
-                <div key={i} className="relative reveal" style={{ transitionDelay: `${i * 100}ms` }}>
-                  <div className="relative z-10 bg-card border border-border rounded-sm p-6 h-full hover-lift">
-                    <div className="flex items-baseline justify-between mb-8">
-                      <span className="font-display text-5xl text-gradient">{s.n}</span>
-                      <div className="w-2 h-2 rounded-full bg-primary shadow-glow" />
-                    </div>
-                    <h3 className="font-display text-xl mb-2">{s.t}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{s.d}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* VISION */}
       <section id="visao" className="py-32 border-t border-border relative overflow-hidden">
