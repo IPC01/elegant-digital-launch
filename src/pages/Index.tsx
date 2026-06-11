@@ -59,42 +59,42 @@ const translations = {
       projectos: "Projectos",
       abordagem: "Abordagem",
       visao: "Visão",
-      agendar: "Agendar"
+      agendar: "Falar connosco"
     },
     hero: {
-      location: "Maputo · Moçambique · Identidade Digital",
-      title1: "Infraestrutura",
-      title2: "segura",
-      title3: "de identidade",
-      title4: "digital",
-      desc: "A ePersona apoia instituições governamentais, operadores de telecomunicações e empresas na concepção de sistemas seguros de identidade, autenticação e assinatura — alinhados com os quadros nacionais.",
-      button1: "Solicitar Apresentação Institucional",
-      button2: "Agendar Consulta",
+      location: "Maputo · Moçambique · Digital & AI Partner",
+      title1: "Engenharia",
+      title2: "digital",
+      title3: "para o futuro",
+      title4: "de Moçambique",
+      desc: "A ZIPBCC é o seu parceiro de tecnologia, engenharia e inteligência artificial. Desde 2013 desenhamos, implementamos e mantemos infra-estruturas, sistemas de informação e soluções digitais para instituições públicas e privadas.",
+      button1: "Solicitar Proposta",
+      button2: "Agendar Reunião",
       grid: [
-        ["PKI", "Chave Pública"],
-        ["eID", "Identidade Digital"],
-        ["Mobile ID", "SIM-based"],
-        ["KYC", "Onboarding seguro"],
+        ["IT", "Software & Cloud"],
+        ["AI", "Inteligência Artificial"],
+        ["ENG", "Engenharia & Infra"],
+        ["GOV", "Consultoria & Estratégia"],
       ]
     },
     vision: {
       section: "/ 05 — A NOSSA VISÃO",
       title: "A Nossa Visão",
-      text: "Contribuir para o desenvolvimento de uma economia digital segura e inclusiva em Moçambique, onde indivíduos e instituições possam interagir com confiança e eficiência",
-      focus: "FOCO ACTUAL · Em fase de desenvolvimento, abertos a parcerias e projectos-piloto"
+      text: "Ser o parceiro digital e de inteligência artificial de referência em Moçambique, acelerando a transformação tecnológica das instituições e a competitividade do tecido empresarial.",
+      focus: "DESDE 2013 · NUEL 100390205 · Maputo, Moçambique"
     },
     mission: {
       title: "A Nossa Missão",
-      text: "Fornecer soluções inovadoras de identidade digital que capacitam instituições e indivíduos em Moçambique."
+      text: "Entregar projectos de engenharia, infra-estruturas, software e IA com excelência técnica, criando valor sustentável para clientes, parceiros e comunidades."
     },
     values: {
-      title: "Por que a ePersona",
+      title: "Por que a ZIPBCC",
       list: [
-        "Alinhamento com os quadros nacionais de certificação digital",
-        "Soluções escaláveis adaptadas a mercados emergentes",
-        "Integração com infraestruturas de telecomunicações",
-        "Promoção da inclusão financeira e acesso a serviços digitais",
-        "Forte foco em segurança e confiança"
+        "Mais de uma década de experiência em Moçambique",
+        "Equipa multidisciplinar: engenharia, IT e IA",
+        "Soluções end-to-end, da estratégia à operação",
+        "Parcerias com fabricantes e marcas internacionais",
+        "Compromisso com qualidade, prazos e conformidade"
       ]
     }
   },
@@ -106,42 +106,42 @@ const translations = {
       projectos: "Projects",
       abordagem: "Approach",
       visao: "Vision",
-      agendar: "Schedule"
+      agendar: "Talk to us"
     },
     hero: {
-      location: "Maputo · Mozambique · Digital Identity",
-      title1: "Infrastructure",
-      title2: "secure",
-      title3: "of digital",
-      title4: "identity",
-      desc: "ePersona supports government institutions, telecommunications operators and companies in the design of secure identity, authentication and signature systems — aligned with national frameworks.",
-      button1: "Request Institutional Presentation",
-      button2: "Schedule Consultation",
+      location: "Maputo · Mozambique · Digital & AI Partner",
+      title1: "Digital engineering",
+      title2: "shaping",
+      title3: "the future of",
+      title4: "Mozambique",
+      desc: "ZIPBCC is your technology, engineering and AI partner. Since 2013 we design, build and operate infrastructure, information systems and digital solutions for public and private institutions.",
+      button1: "Request Proposal",
+      button2: "Schedule Meeting",
       grid: [
-        ["PKI", "Public Key"],
-        ["eID", "Digital Identity"],
-        ["Mobile ID", "SIM-based"],
-        ["KYC", "Secure Onboarding"],
+        ["IT", "Software & Cloud"],
+        ["AI", "Artificial Intelligence"],
+        ["ENG", "Engineering & Infra"],
+        ["GOV", "Strategy & Consulting"],
       ]
     },
     vision: {
       section: "/ 05 — OUR VISION",
       title: "Our Vision",
-      text: "To support the development of a secure, inclusive digital economy in Mozambique, where individuals and institutions can interact with trust and efficiency",
-      focus: "CURRENT FOCUS · In development phase, open to partnerships and pilot projects"
+      text: "To be the leading digital & AI partner in Mozambique, accelerating institutional transformation and business competitiveness.",
+      focus: "SINCE 2013 · NUEL 100390205 · Maputo, Mozambique"
     },
     mission: {
       title: "Our Mission",
-      text: "To provide innovative digital identity solutions that empower institutions and individuals in Mozambique."
+      text: "Deliver engineering, infrastructure, software and AI projects with technical excellence, creating sustainable value for clients, partners and communities."
     },
     values: {
-      title: "Why ePersona",
+      title: "Why ZIPBCC",
       list: [
-        "Alignment with national digital certification frameworks",
-        "Scalable solutions for emerging markets",
-        "Integration with telecom infrastructure",
-        "Support for financial inclusion",
-        "Strong focus on security and trust"
+        "Over a decade of proven experience in Mozambique",
+        "Multidisciplinary team: engineering, IT and AI",
+        "End-to-end solutions, from strategy to operations",
+        "Partnerships with international brands and vendors",
+        "Commitment to quality, deadlines and compliance"
       ]
     }
   }
