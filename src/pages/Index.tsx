@@ -167,8 +167,11 @@ const Index = () => {
       <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${scrolled ? "py-3 backdrop-blur-xl bg-background/70 border-b border-border" : "py-6 bg-transparent"}`}>
         <div className="container flex items-center justify-between">
           <a href="#top" className="flex items-center gap-2.5 group">
-            <img src={logoImg} alt="ePersona" className="w-9 h-9 rounded-sm object-cover shadow-glow group-hover:scale-105 transition-transform" />
-            <span className="font-display text-xl tracking-tight">ePersona</span>
+            <img src={logoImg} alt="ZIPBCC" className="w-10 h-10 object-contain group-hover:scale-105 transition-transform" />
+            <div className="flex flex-col leading-none">
+              <span className="font-display text-xl tracking-tight">ZIPBCC</span>
+              <span className="text-[10px] font-mono text-muted-foreground tracking-wider hidden sm:block">DIGITAL & AI PARTNER</span>
+            </div>
           </a>
           <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#sobre" className="hover:text-foreground transition-colors">{t.nav.sobre}</a>
@@ -183,7 +186,7 @@ const Index = () => {
               {language === 'pt' ? 'EN' : 'PT'}
             </button>
             <ThemeToggle />
-            <a href="mailto:marvin@e-persona.com" className="group inline-flex items-center gap-2 text-sm px-4 py-2 rounded-sm border border-border hover:border-primary hover:bg-primary/5 transition-all">
+            <a href="#contacto" className="group inline-flex items-center gap-2 text-sm px-4 py-2 rounded-sm border border-border hover:border-primary hover:bg-primary/5 transition-all">
               {t.nav.agendar}
               <ArrowUpRight className="w-3.5 h-3.5 group-hover:rotate-45 transition-transform" />
             </a>
