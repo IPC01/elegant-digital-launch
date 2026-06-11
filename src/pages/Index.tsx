@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import {
-  ShieldCheck, Fingerprint, KeyRound, Network, Lock, Sparkles,
-  ArrowUpRight, Building2, Smartphone, Banknote, Briefcase,
-  ChevronRight, MapPin, Mail, Twitter, Linkedin, Phone, Hash, Calendar
+  Building2, TrendingUp, Users, Wrench, Monitor, ShieldCheck,
+  ArrowUpRight, MapPin, Mail, Twitter, Linkedin, Phone, Calendar, ChevronRight
 } from "lucide-react";
 import heroImg from "@/assets/hero-identity.jpg";
 import logoAsset from "@/assets/zipbcc-logo.png.asset.json";
@@ -29,25 +28,12 @@ import { useReveal } from "@/hooks/use-reveal";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 const services = [
-  { icon: Fingerprint, title: "Sistemas de Identidade Digital", desc: "Mobile ID baseado em SIM, sistemas eID e plataformas seguras de autenticação." },
-  { icon: KeyRound, title: "Infraestrutura de Chave Pública", desc: "Configuração de Autoridades de Certificação, gestão do ciclo de vida e validação." },
-  { icon: Network, title: "Integração de Sistemas", desc: "Camadas de identidade em sistemas existentes, APIs seguras e autenticação." },
-  { icon: ShieldCheck, title: "Cibersegurança e Conformidade", desc: "Estruturas de autenticação, conformidade de assinatura digital e mitigação de fraude." },
-  { icon: Sparkles, title: "Consultoria e Estratégia", desc: "Transformação digital, arquitetura técnica e apoio institucional." },
-];
-
-const useCases = [
-  { icon: Building2, tag: "Governo", items: ["Identidade digital para serviços públicos", "Autenticação segura", "Assinaturas digitais"] },
-  { icon: Smartphone, tag: "Telecom", items: ["Implementação de Mobile ID", "Infraestrutura de identidade", "Geração de receita"] },
-  { icon: Banknote, tag: "Financeiro", items: ["Onboarding KYC seguro", "Autenticação de transações", "Prevenção de fraude"] },
-  { icon: Briefcase, tag: "Sector Privado", items: ["Autenticação de colaboradores", "Contratos digitais", "Controlo de acesso"] },
-];
-
-const steps = [
-  { n: "01", t: "Avaliação Institucional", d: "Diagnóstico do contexto, requisitos regulatórios e maturidade digital." },
-  { n: "02", t: "Desenho da Solução", d: "Arquitetura técnica alinhada aos quadros nacionais e melhores práticas." },
-  { n: "03", t: "Apoio à Implementação", d: "Acompanhamento técnico, integração e validação de cada componente." },
-  { n: "04", t: "Suporte e Capacitação", d: "Formação contínua e operação assistida para autonomia institucional." },
+  { icon: Building2, title: "Projectos de Infra-estrutura", desc: "Desenvolvimento de projectos de infra-estrutura, abrangendo edifícios, portos, linhas férreas, estradas e pontes com rigor técnico." },
+  { icon: TrendingUp, title: "Soluções de Investimentos", desc: "Consultoria e estruturação de soluções de investimentos para projectos de média e grande dimensão." },
+  { icon: Users, title: "Consultoria Diversa", desc: "Consultoria estratégica e técnica nas áreas de engenharia, IT e transformação digital." },
+  { icon: Wrench, title: "Engenharia", desc: "Serviços de engenharia civil, mecânica e eléctrica, desde o desenho até à execução e fiscalização." },
+  { icon: Monitor, title: "Soluções de Informática e Comunicações", desc: "Implementação de sistemas de informação, redes, telecomunicações e infra-estruturas tecnológicas." },
+  { icon: ShieldCheck, title: "Manutenção e Conservação", desc: "Desenho de estratégias de manutenção e conservação de infra-estruturas, edifícios, portos, estradas e pontes." },
 ];
 
 const translations = {
@@ -55,9 +41,7 @@ const translations = {
     nav: {
       sobre: "Sobre",
       servicos: "Serviços",
-      casos: "Casos de Uso",
       projectos: "Projectos",
-      abordagem: "Abordagem",
       visao: "Visão",
       agendar: "Falar connosco"
     },
@@ -102,9 +86,7 @@ const translations = {
     nav: {
       sobre: "About",
       servicos: "Services",
-      casos: "Use Cases",
       projectos: "Projects",
-      abordagem: "Approach",
       visao: "Vision",
       agendar: "Talk to us"
     },
@@ -176,9 +158,7 @@ const Index = () => {
           <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#sobre" className="hover:text-foreground transition-colors">{t.nav.sobre}</a>
             <a href="#servicos" className="hover:text-foreground transition-colors">{t.nav.servicos}</a>
-            <a href="#casos" className="hover:text-foreground transition-colors">{t.nav.casos}</a>
             <a href="#projectos" className="hover:text-foreground transition-colors">{t.nav.projectos}</a>
-            <a href="#abordagem" className="hover:text-foreground transition-colors">{t.nav.abordagem}</a>
             <a href="#visao" className="hover:text-foreground transition-colors">{t.nav.visao}</a>
           </nav>
           <div className="flex items-center gap-2">
@@ -344,37 +324,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* USE CASES */}
-      <section id="casos" className="py-32 border-t border-border">
-        <div className="container">
-          <div className="mb-16 reveal">
-            <div className="font-mono text-xs text-primary mb-4">/ 03 — CASOS DE USO</div>
-            <h2 className="font-display text-4xl md:text-6xl leading-tight max-w-3xl">
-              Quatro sectores. Uma <span className="italic text-gradient">infraestrutura</span> comum.
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {useCases.map((u, i) => {
-              const Icon = u.icon;
-              return (
-                <div key={i} className="glass rounded-sm p-7 hover-lift reveal" style={{ transitionDelay: `${i * 80}ms` }}>
-                  <Icon className="w-7 h-7 text-primary mb-6" strokeWidth={1.5} />
-                  <div className="font-mono text-xs text-accent mb-2">{u.tag.toUpperCase()}</div>
-                  <ul className="space-y-3 mt-6">
-                    {u.items.map((it, k) => (
-                      <li key={k} className="text-sm text-muted-foreground flex gap-2 items-start border-t border-border pt-3 first:border-0 first:pt-0">
-                        <span className="text-primary mt-0.5">·</span>
-                        {it}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
 
       {/* PROJECTS */}
       <section id="projectos" className="py-32 border-t border-border">
@@ -430,37 +379,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* APPROACH */}
-      <section id="abordagem" className="py-32 border-t border-border">
-        <div className="container">
-          <div className="grid md:grid-cols-12 gap-12 mb-16">
-            <div className="md:col-span-5 reveal">
-              <div className="font-mono text-xs text-primary mb-4">/ 04 — A NOSSA ABORDAGEM</div>
-              <h2 className="font-display text-4xl md:text-6xl leading-tight">
-                Quatro etapas, <span className="italic text-gradient-accent">um caminho</span> claro.
-              </h2>
-            </div>
-          </div>
-
-          <div className="relative">
-            <div className="absolute left-0 right-0 top-[60px] h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent hidden md:block" />
-            <div className="grid md:grid-cols-4 gap-6">
-              {steps.map((s, i) => (
-                <div key={i} className="relative reveal" style={{ transitionDelay: `${i * 100}ms` }}>
-                  <div className="relative z-10 bg-card border border-border rounded-sm p-6 h-full hover-lift">
-                    <div className="flex items-baseline justify-between mb-8">
-                      <span className="font-display text-5xl text-gradient">{s.n}</span>
-                      <div className="w-2 h-2 rounded-full bg-primary shadow-glow" />
-                    </div>
-                    <h3 className="font-display text-xl mb-2">{s.t}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{s.d}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* VISION */}
       <section id="visao" className="py-32 border-t border-border relative overflow-hidden">
@@ -591,7 +509,6 @@ const Index = () => {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><a href="#sobre" className="hover:text-foreground transition-colors">Sobre</a></li>
               <li><a href="#servicos" className="hover:text-foreground transition-colors">Serviços</a></li>
-              <li><a href="#casos" className="hover:text-foreground transition-colors">Casos de Uso</a></li>
               <li><a href="#projectos" className="hover:text-foreground transition-colors">Projectos</a></li>
               <li><a href="#contacto" className="hover:text-foreground transition-colors">Contactos</a></li>
             </ul>
