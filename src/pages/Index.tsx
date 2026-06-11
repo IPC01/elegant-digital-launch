@@ -2,20 +2,21 @@ import { useEffect, useState } from "react";
 import {
   ShieldCheck, Fingerprint, KeyRound, Network, Lock, Sparkles,
   ArrowUpRight, Building2, Smartphone, Banknote, Briefcase,
-  ChevronRight, MapPin, Mail, Twitter, Linkedin
+  ChevronRight, MapPin, Mail, Twitter, Linkedin, Phone, Hash, Calendar
 } from "lucide-react";
 import heroImg from "@/assets/hero-identity.jpg";
-import logoImg from "@/assets/logo.png";
+import logoAsset from "@/assets/zipbcc-logo.png.asset.json";
+const logoImg = logoAsset.url;
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
 
 const metrics = [
-  { value: "12+", label: "Projectos entregues", sub: "em fase piloto e produção" },
-  { value: "08", label: "Clientes institucionais", sub: "governo, telecom e banca" },
+  { value: "12+", label: "Anos de mercado", sub: "fundada em Maio de 2013" },
+  { value: "40+", label: "Projectos entregues", sub: "engenharia e digital" },
+  { value: "25+", label: "Clientes institucionais", sub: "público e privado" },
   { value: "99.9%", label: "Disponibilidade média", sub: "infraestrutura crítica" },
-  { value: "4", label: "Sectores estratégicos", sub: "cobertura nacional" },
 ];
 
 const projects = [
@@ -58,42 +59,42 @@ const translations = {
       projectos: "Projectos",
       abordagem: "Abordagem",
       visao: "Visão",
-      agendar: "Agendar"
+      agendar: "Falar connosco"
     },
     hero: {
-      location: "Maputo · Moçambique · Identidade Digital",
-      title1: "Infraestrutura",
-      title2: "segura",
-      title3: "de identidade",
-      title4: "digital",
-      desc: "A ePersona apoia instituições governamentais, operadores de telecomunicações e empresas na concepção de sistemas seguros de identidade, autenticação e assinatura — alinhados com os quadros nacionais.",
-      button1: "Solicitar Apresentação Institucional",
-      button2: "Agendar Consulta",
+      location: "Maputo · Moçambique · Digital & AI Partner",
+      title1: "Engenharia",
+      title2: "digital",
+      title3: "para o futuro",
+      title4: "de Moçambique",
+      desc: "A ZIPBCC é o seu parceiro de tecnologia, engenharia e inteligência artificial. Desde 2013 desenhamos, implementamos e mantemos infra-estruturas, sistemas de informação e soluções digitais para instituições públicas e privadas.",
+      button1: "Solicitar Proposta",
+      button2: "Agendar Reunião",
       grid: [
-        ["PKI", "Chave Pública"],
-        ["eID", "Identidade Digital"],
-        ["Mobile ID", "SIM-based"],
-        ["KYC", "Onboarding seguro"],
+        ["IT", "Software & Cloud"],
+        ["AI", "Inteligência Artificial"],
+        ["ENG", "Engenharia & Infra"],
+        ["GOV", "Consultoria & Estratégia"],
       ]
     },
     vision: {
       section: "/ 05 — A NOSSA VISÃO",
       title: "A Nossa Visão",
-      text: "Contribuir para o desenvolvimento de uma economia digital segura e inclusiva em Moçambique, onde indivíduos e instituições possam interagir com confiança e eficiência",
-      focus: "FOCO ACTUAL · Em fase de desenvolvimento, abertos a parcerias e projectos-piloto"
+      text: "Ser o parceiro digital e de inteligência artificial de referência em Moçambique, acelerando a transformação tecnológica das instituições e a competitividade do tecido empresarial.",
+      focus: "DESDE 2013 · NUEL 100390205 · Maputo, Moçambique"
     },
     mission: {
       title: "A Nossa Missão",
-      text: "Fornecer soluções inovadoras de identidade digital que capacitam instituições e indivíduos em Moçambique."
+      text: "Entregar projectos de engenharia, infra-estruturas, software e IA com excelência técnica, criando valor sustentável para clientes, parceiros e comunidades."
     },
     values: {
-      title: "Por que a ePersona",
+      title: "Por que a ZIPBCC",
       list: [
-        "Alinhamento com os quadros nacionais de certificação digital",
-        "Soluções escaláveis adaptadas a mercados emergentes",
-        "Integração com infraestruturas de telecomunicações",
-        "Promoção da inclusão financeira e acesso a serviços digitais",
-        "Forte foco em segurança e confiança"
+        "Mais de uma década de experiência em Moçambique",
+        "Equipa multidisciplinar: engenharia, IT e IA",
+        "Soluções end-to-end, da estratégia à operação",
+        "Parcerias com fabricantes e marcas internacionais",
+        "Compromisso com qualidade, prazos e conformidade"
       ]
     }
   },
@@ -105,42 +106,42 @@ const translations = {
       projectos: "Projects",
       abordagem: "Approach",
       visao: "Vision",
-      agendar: "Schedule"
+      agendar: "Talk to us"
     },
     hero: {
-      location: "Maputo · Mozambique · Digital Identity",
-      title1: "Infrastructure",
-      title2: "secure",
-      title3: "of digital",
-      title4: "identity",
-      desc: "ePersona supports government institutions, telecommunications operators and companies in the design of secure identity, authentication and signature systems — aligned with national frameworks.",
-      button1: "Request Institutional Presentation",
-      button2: "Schedule Consultation",
+      location: "Maputo · Mozambique · Digital & AI Partner",
+      title1: "Digital engineering",
+      title2: "shaping",
+      title3: "the future of",
+      title4: "Mozambique",
+      desc: "ZIPBCC is your technology, engineering and AI partner. Since 2013 we design, build and operate infrastructure, information systems and digital solutions for public and private institutions.",
+      button1: "Request Proposal",
+      button2: "Schedule Meeting",
       grid: [
-        ["PKI", "Public Key"],
-        ["eID", "Digital Identity"],
-        ["Mobile ID", "SIM-based"],
-        ["KYC", "Secure Onboarding"],
+        ["IT", "Software & Cloud"],
+        ["AI", "Artificial Intelligence"],
+        ["ENG", "Engineering & Infra"],
+        ["GOV", "Strategy & Consulting"],
       ]
     },
     vision: {
       section: "/ 05 — OUR VISION",
       title: "Our Vision",
-      text: "To support the development of a secure, inclusive digital economy in Mozambique, where individuals and institutions can interact with trust and efficiency",
-      focus: "CURRENT FOCUS · In development phase, open to partnerships and pilot projects"
+      text: "To be the leading digital & AI partner in Mozambique, accelerating institutional transformation and business competitiveness.",
+      focus: "SINCE 2013 · NUEL 100390205 · Maputo, Mozambique"
     },
     mission: {
       title: "Our Mission",
-      text: "To provide innovative digital identity solutions that empower institutions and individuals in Mozambique."
+      text: "Deliver engineering, infrastructure, software and AI projects with technical excellence, creating sustainable value for clients, partners and communities."
     },
     values: {
-      title: "Why ePersona",
+      title: "Why ZIPBCC",
       list: [
-        "Alignment with national digital certification frameworks",
-        "Scalable solutions for emerging markets",
-        "Integration with telecom infrastructure",
-        "Support for financial inclusion",
-        "Strong focus on security and trust"
+        "Over a decade of proven experience in Mozambique",
+        "Multidisciplinary team: engineering, IT and AI",
+        "End-to-end solutions, from strategy to operations",
+        "Partnerships with international brands and vendors",
+        "Commitment to quality, deadlines and compliance"
       ]
     }
   }
@@ -166,8 +167,11 @@ const Index = () => {
       <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${scrolled ? "py-3 backdrop-blur-xl bg-background/70 border-b border-border" : "py-6 bg-transparent"}`}>
         <div className="container flex items-center justify-between">
           <a href="#top" className="flex items-center gap-2.5 group">
-            <img src={logoImg} alt="ePersona" className="w-9 h-9 rounded-sm object-cover shadow-glow group-hover:scale-105 transition-transform" />
-            <span className="font-display text-xl tracking-tight">ePersona</span>
+            <img src={logoImg} alt="ZIPBCC" className="w-10 h-10 object-contain group-hover:scale-105 transition-transform" />
+            <div className="flex flex-col leading-none">
+              <span className="font-display text-xl tracking-tight">ZIPBCC</span>
+              <span className="text-[10px] font-mono text-muted-foreground tracking-wider hidden sm:block">DIGITAL & AI PARTNER</span>
+            </div>
           </a>
           <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#sobre" className="hover:text-foreground transition-colors">{t.nav.sobre}</a>
@@ -182,7 +186,7 @@ const Index = () => {
               {language === 'pt' ? 'EN' : 'PT'}
             </button>
             <ThemeToggle />
-            <a href="mailto:marvin@e-persona.com" className="group inline-flex items-center gap-2 text-sm px-4 py-2 rounded-sm border border-border hover:border-primary hover:bg-primary/5 transition-all">
+            <a href="#contacto" className="group inline-flex items-center gap-2 text-sm px-4 py-2 rounded-sm border border-border hover:border-primary hover:bg-primary/5 transition-all">
               {t.nav.agendar}
               <ArrowUpRight className="w-3.5 h-3.5 group-hover:rotate-45 transition-transform" />
             </a>
@@ -249,20 +253,39 @@ const Index = () => {
           <div className="md:col-span-4 reveal">
             <div className="font-mono text-xs text-primary mb-4">/ 01 — SOBRE</div>
             <h2 className="font-display text-4xl md:text-5xl leading-tight">
-              Construindo <span className="italic text-gradient">confiança</span> digital em Moçambique.
+              Mais de uma década a construir <span className="italic text-gradient">Moçambique</span> digital.
             </h2>
           </div>
           <div className="md:col-span-7 md:col-start-6 space-y-6 reveal">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              A ePersona é uma empresa emergente de consultoria em tecnologias de informação e
-              infraestruturas digitais, focada em <span className="text-foreground">sistemas seguros de identidade</span>,
-              Infraestrutura de Chave Pública (PKI) e mecanismos de autenticação.
+              A <span className="text-foreground">ZIPBCC, Lda</span> é uma sociedade por quotas constituída a
+              17 de Maio de 2013, com sede em Maputo. Combinamos engenharia, infra-estruturas e
+              soluções de informática e comunicações para entregar projectos completos, da concepção
+              à operação.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Desenvolvemos capacidades para apoiar instituições públicas e privadas na criação de
-              ecossistemas digitais confiáveis e escaláveis — que permitam acesso seguro, assinaturas
-              digitais e verificação de identidade.
+              Operamos em áreas tão diversas como desenho e manutenção de infra-estruturas, edifícios,
+              portos, vias férreas, estradas e pontes, mas também em <span className="text-foreground">software,
+              cloud e inteligência artificial</span> — sempre como parceiro digital de confiança dos nossos clientes.
             </p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
+              <div className="border border-border rounded-sm p-3">
+                <div className="font-mono text-[10px] text-primary mb-1">NUEL</div>
+                <div className="text-sm">100390205</div>
+              </div>
+              <div className="border border-border rounded-sm p-3">
+                <div className="font-mono text-[10px] text-primary mb-1">FUNDADA</div>
+                <div className="text-sm">17 Mai 2013</div>
+              </div>
+              <div className="border border-border rounded-sm p-3">
+                <div className="font-mono text-[10px] text-primary mb-1">TIPO</div>
+                <div className="text-sm">Soc. por Quotas</div>
+              </div>
+              <div className="border border-border rounded-sm p-3">
+                <div className="font-mono text-[10px] text-primary mb-1">SEDE</div>
+                <div className="text-sm">Maputo, MZ</div>
+              </div>
+            </div>
             <div className="pt-4 grid grid-cols-2 gap-4">
               {values.map((v, i) => (
                 <div key={i} className="flex gap-3 items-start">
@@ -476,21 +499,33 @@ const Index = () => {
               <div className="md:col-span-7">
                 <div className="font-mono text-xs text-primary mb-6">/ CONTACTO</div>
                 <h2 className="font-display text-4xl md:text-6xl leading-[1.05] mb-6">
-                  Vamos construir o seu <span className="italic text-gradient">ecossistema</span> de identidade digital.
+                  Vamos construir o seu próximo <span className="italic text-gradient">projecto</span> digital.
                 </h2>
                 <p className="text-muted-foreground text-lg max-w-xl">
-                  Estamos abertos a parcerias estratégicas, projectos-piloto e implementações colaborativas.
+                  Engenharia, software e IA num só parceiro. Estamos abertos a propostas, concursos e parcerias estratégicas.
                 </p>
+                <div className="mt-8 space-y-3 text-sm">
+                  <div className="flex items-center gap-3 text-muted-foreground">
+                    <MapPin className="w-4 h-4 text-primary" />
+                    Rua Alfred Keil nº 75, 1º Andar · Polana · KaMpfumo · Maputo
+                  </div>
+                  <a href="mailto:geral@zipbcc.co.mz" className="flex items-center gap-3 hover:text-foreground transition-colors text-muted-foreground">
+                    <Mail className="w-4 h-4 text-primary" /> geral@zipbcc.co.mz
+                  </a>
+                  <a href="tel:+258213000000" className="flex items-center gap-3 hover:text-foreground transition-colors text-muted-foreground">
+                    <Phone className="w-4 h-4 text-primary" /> +258 21 300 000 · +258 84 300 0000
+                  </a>
+                </div>
               </div>
               <div className="md:col-span-5 space-y-3">
                 {[
-                  "Agendar Reunião Inicial",
-                  "Solicitar Discussão Técnica",
-                  "Explorar Oportunidades de Parceria",
+                  "Solicitar Proposta Comercial",
+                  "Agendar Reunião Técnica",
+                  "Explorar Parcerias Estratégicas",
                 ].map((t, i) => (
                   <a
                     key={i}
-                    href="mailto:marvin@e-persona.com"
+                    href="mailto:comercial@zipbcc.co.mz"
                     className="group flex items-center justify-between gap-4 px-5 py-4 rounded-sm border border-border bg-background/40 hover:border-primary hover:bg-primary/5 transition-all"
                   >
                     <span className="text-sm md:text-base">{t}</span>
@@ -537,12 +572,19 @@ const Index = () => {
         <div className="container grid md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img src={logoImg} alt="ePersona" className="w-8 h-8 rounded-sm object-cover" />
-              <span className="font-display text-xl">ePersona</span>
+              <img src={logoImg} alt="ZIPBCC" className="w-9 h-9 object-contain" />
+              <div className="flex flex-col leading-none">
+                <span className="font-display text-xl">ZIPBCC</span>
+                <span className="text-[10px] font-mono text-muted-foreground tracking-wider">YOUR DIGITAL & AI PARTNER</span>
+              </div>
             </div>
             <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
-              A ePersona apoia instituições governamentais, operadores de telecomunicações e empresas na concepção de sistemas seguros .
+              ZIPBCC, Lda — engenharia, infra-estruturas, soluções de informática e IA. A construir Moçambique digital desde 2013.
             </p>
+            <div className="mt-4 space-y-1 text-[11px] font-mono text-muted-foreground">
+              <div>NUEL · 100390205</div>
+              <div>SOC. POR QUOTAS · 40.000,00 MT</div>
+            </div>
           </div>
           <div>
             <h3 className="font-medium mb-4 text-sm">Links Rápidos</h3>
@@ -551,16 +593,21 @@ const Index = () => {
               <li><a href="#servicos" className="hover:text-foreground transition-colors">Serviços</a></li>
               <li><a href="#casos" className="hover:text-foreground transition-colors">Casos de Uso</a></li>
               <li><a href="#projectos" className="hover:text-foreground transition-colors">Projectos</a></li>
+              <li><a href="#contacto" className="hover:text-foreground transition-colors">Contactos</a></li>
             </ul>
           </div>
           <div>
             <h3 className="font-medium mb-4 text-sm">Contactos</h3>
             <div className="space-y-2 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4" /> Maputo, Moçambique
+              <div className="flex gap-2 items-start">
+                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                <span>Rua Alfred Keil nº 75, 1º Andar<br/>Polana · KaMpfumo · Maputo</span>
               </div>
-              <a href="mailto:marvin@e-persona.com" className="flex items-center gap-2 hover:text-foreground transition-colors">
-                <Mail className="w-4 h-4" /> marvin@e-persona.com
+              <a href="mailto:geral@zipbcc.co.mz" className="flex items-center gap-2 hover:text-foreground transition-colors">
+                <Mail className="w-4 h-4" /> geral@zipbcc.co.mz
+              </a>
+              <a href="tel:+258213000000" className="flex items-center gap-2 hover:text-foreground transition-colors">
+                <Phone className="w-4 h-4" /> +258 21 300 000
               </a>
             </div>
           </div>
@@ -574,10 +621,14 @@ const Index = () => {
                 <Twitter className="w-4 h-4" />
               </a>
             </div>
+            <div className="mt-6 text-[11px] font-mono text-muted-foreground leading-relaxed">
+              HORÁRIO<br/>
+              Seg–Sex · 08:00 — 17:00
+            </div>
           </div>
         </div>
         <div className="container mt-8 pt-8 border-t border-border text-center text-xs font-mono text-muted-foreground">
-          © {new Date().getFullYear()} Todos os direitos reservados a Kumalisa Tech
+          © {new Date().getFullYear()} ZIPBCC, LDA · Todos os direitos reservados
         </div>
       </footer>
     </div>
